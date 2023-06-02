@@ -1,0 +1,56 @@
+<?php
+
+namespace App\Models;
+
+
+
+class post
+{
+    private static $blog_post = [
+        [
+            "title" => "judul post pertama",
+            "slug" => "judul-post-pertama",
+            "author" => "katalog produk",
+            "body" => ", quas modi delectus, numquam dolores
+            inventore suscipit accusamus! Exercitationem eligendi odit ipsa, in impedit consectetur
+            dicta veniam neque, culpa repellendus voluptatum quibusdam veritatis commodi perspiciatis
+            officiis pariatur tempore quod! Enim doloribus laboriosam exercitationem qui esse eveniet
+            eos corrupti praesentium consequatur, repellat numquam sit suscipit ipsam excepturi
+            mollitia ipsa animi quasi vitae, repudiandae laudantium impedit possimus natus. Dolor vitae numquam vero ea, maiores laudantium error omnis."
+        ],Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Nostrum officiis sit quidem temporibus enim est
+        [
+            "title" => "judul post kedua",
+            "slug" => "judul-post-kedua",
+            "author" => "tentang produk",
+            "body" => "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam tenetur enim itaque blanditiis autem, eligendi impedit beatae
+            consectetur inventore dolores saepe voluptas incidunt quis magni ipsum ullam esse ea delectus velit quidem. Deserunt distinctio similique,
+            quo itaque molestiae unde reprehenderit aperiam natus ducimus fugit quas doloremque odio debitis, dolorem nihil molestias id assumenda amet!
+            Atque laborum unde, culpa id dolorem aspernatur vero, molestiae perspiciatis alias nihil totam, quis ullam cum vel! Modi culpa,
+            tempora quas obcaecati beatae amet consectetur quidem ex, aspernatur vitae placeat necessitatibus totam, nam nesciunt qui ad?
+            Molestiae natus cumque consequuntur sed placeat. Tempora earum eligendi fugit."
+        ],
+    ];
+
+    public static function all()
+    {
+        return collect(self::$blog_post);
+    }
+
+    public static function find($slug)
+    {
+        $post = static ::all();
+        // $posts = [];
+        // foreach($post as $posts){
+        //     if($posts["slug"] === $slug){
+        //         $post = $posts;
+
+        //     }
+        // }
+
+        return $post->firstWhere('slug', $slug);
+    }
+
+
+}
+

@@ -1,0 +1,21 @@
+
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus assumenda dolor obcaecati ipsam, totam voluptate corporis. Minima laborum perspiciatis doloribus hic distinctio ex nam possimus, tempore ipsum ducimus ipsam ipsa quo. Cum tempora in quos id nemo possimus laudantium, dolor saepe fuga veniam numquam voluptate, necessitatibus, consectetur nulla magni natus dolorem harum sunt praesentium libero voluptatibus aliquam debitis quibusdam amet. Voluptatibus tempora voluptates aut dicta delectus vel tenetur corrupti dolorem omnis, facilis illo enim ipsa molestias recusandae iure autem ab facere accusantium quae suscipit dolorum. Neque ut iste at explicabo non laboriosam provident voluptate quaerat, consequatur, enim ex saepe dolorum.
+
+App\Models\Post::create([
+    'title' => 'Judul Ketiga',
+    'category_id' => 3,
+    'slug' => 'judul-ketiga',
+    'excerpt' => 'Lorem Ipsum Ketiga',
+    'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus assumenda dolor obcaecati ipsam, totam voluptate corporis. Minima laborum perspiciatis doloribus hic distinctio ex nam possimus, tempore ipsum ducimus ipsam ipsa quo. Cum tempora in quos id nemo possimus laudantium, dolor saepe fuga veniam numquam voluptate, necessitatibus, consectetur nulla magni natus dolorem harum sunt praesentium libero voluptatibus aliquam debitis quibusdam amet. Voluptatibus tempora voluptates aut dicta delectus vel tenetur corrupti dolorem omnis, facilis illo enim ipsa molestias recusandae iure autem ab facere accusantium quae suscipit dolorum. Neque ut iste at explicabo non laboriosam provident voluptate quaerat, consequatur, enim ex saepe dolorum.'
+])
+
+
+App\Models\Category::create([
+    'name' => 'Personal',
+    'slug' => 'personal'
+])
+
+
+ <p>By. Irawan Group in <a href="/categories/{{ $post->category->name }}" class="text-decoration-none">{{ $post->category->name }}</a></p>
+
+<p>By. <a href="#">{{ $post->user->name }}</a> <a href="/categories/{{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></p>
